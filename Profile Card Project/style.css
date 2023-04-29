@@ -13,7 +13,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .container {
@@ -148,14 +147,11 @@ body {
   inherits: false;
 }
 
-/* For Desktop View */
-@media screen and (min-width: 1024px) {
-}
-
-/* For Tablet View */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .container {
     width: 85%;
+    height: 60%;
   }
 
   .rotation {
@@ -168,10 +164,11 @@ body {
   }
 }
 
-/* For Mobile Portrait View */
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 600px) {
   .container {
     width: 85%;
+    height: 60%;
   }
 
   .rotation {
@@ -184,81 +181,48 @@ body {
   }
 }
 
-/* For Mobile Landscape View */
-@media screen and (max-device-width: 640px) and (orientation: landscape) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
   .container {
     width: 85%;
+    height: 60%;
   }
 
   .rotation {
     width: 95%;
-    height: 70%;
-    bottom: 210px;
-    top: 200px;
+    height: 65%;
+    bottom: 120px;
+    top: 5px;
     left: 2px;
     right: 2px;
   }
 }
 
-/* For Mobile Phones Portrait or Landscape View */
-@media screen and (max-device-width: 640px) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
   .container {
-    width: 85%;
+    width: 30%;
   }
 
   .rotation {
-    width: 95%;
-    height: 70%;
-    bottom: 210px;
-    top: 200px;
+    width: 34%;
+    height: 60%;
+    bottom: 145px;
     left: 2px;
     right: 2px;
   }
 }
 
-/* For iPhone 4 Portrait or Landscape View */
-@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
   .container {
-    width: 85%;
+    width: 30%;
   }
 
   .rotation {
-    width: 95%;
-    height: 70%;
-    bottom: 210px;
-    top: 200px;
-    left: 2px;
-    right: 2px;
-  }
-}
-
-/* For iPhone 5 Portrait or Landscape View */
-@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-  .container {
-    width: 85%;
-  }
-
-  .rotation {
-    width: 95%;
-    height: 70%;
-    bottom: 210px;
-    top: 200px;
-    left: 2px;
-    right: 2px;
-  }
-}
-
-/* For iPhone 6 and 6 plus Portrait or Landscape View */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
-  .container {
-    width: 85%;
-  }
-
-  .rotation {
-    width: 95%;
-    height: 70%;
-    bottom: 210px;
-    top: 200px;
+    width: 34%;
+    height: 60%;
+    bottom: 145px;
     left: 2px;
     right: 2px;
   }
