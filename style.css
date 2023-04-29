@@ -30,13 +30,13 @@ ol {
   color: rgb(145, 31, 31);
 }
 
-ol {
-  padding-top: 2%;
-}
-
 a:hover,
 ol:hover {
   color: rgb(230, 48, 48);
+}
+
+ol {
+  padding-top: 2%;
 }
 
 /* For Desktop View */
