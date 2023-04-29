@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        background: #ffc;
+        height: 50vh;
+      }
+      .child-div-1 {
+        background: #000;
+        margin-left: 20px;
+        height: 100%;
+        width: 20vh;
+        position: relative;
+      }
+      .child-div-1 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+      }
+
+      .child-div-2 {
+        background: #ee6;
+        margin-left: 20px;
+        height: 100%;
+        width: 20vh;
+        position: relative;
+      }
+      .child-div-2 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+      }
+
+      .child-div-3 {
+        background: #fdd;
+        margin-left: 20px;
+        height: 100%;
+        width: 20vh;
+        position: relative;
+      }
+      .child-div-3 p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Example of same height div with its respective parent height</h3>
+    <div class="container">
+      <div class="child-div-1"><p>Div 1</p></div>
+      <div class="child-div-2"><p>Div 2</p></div>
+      <div class="child-div-3"><p>Div 3</p></div>
+    </div>
+  </body>
+</html>

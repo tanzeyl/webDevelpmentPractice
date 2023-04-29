@@ -147,7 +147,6 @@ body {
   inherits: false;
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .container {
     width: 85%;
@@ -164,7 +163,6 @@ body {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px) and (min-width: 600px) {
   .container {
     width: 85%;
@@ -181,7 +179,6 @@ body {
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 992px) and (min-width: 768px) {
   .container {
     width: 85%;
@@ -198,7 +195,6 @@ body {
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
   .container {
     width: 30%;
@@ -213,7 +209,6 @@ body {
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .container {
     width: 30%;
