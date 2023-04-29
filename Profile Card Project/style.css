@@ -18,11 +18,19 @@ body {
 .container {
   background-color: rgb(240, 105, 105);
   display: block;
-  width: 30%;
+  width: 35%;
   margin: 10% auto;
   border-radius: 50px;
   padding: 1%;
   text-align: center;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
 }
 
 .profileImage {
@@ -109,15 +117,15 @@ body {
 }
 
 .rotation {
-  width: 34%;
-  height: 60%;
+  width: 105%;
+  height: 105%;
+  left: -11px;
+  bottom: 20px;
+  top: 16px;
   border-radius: 50px;
-  bottom: 145px;
-  left: 2px;
-  right: 2px;
   position: absolute;
   margin: auto;
-  z-index: -1;
+  z-index: -10;
   --angle: 0deg;
   filter: blur(20px);
   opacity: 100%;
@@ -145,80 +153,4 @@ body {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
-}
-
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 85%;
-    height: 60%;
-  }
-
-  .rotation {
-    width: 95%;
-    height: 70%;
-    bottom: 210px;
-    top: 200px;
-    left: 2px;
-    right: 2px;
-  }
-}
-
-@media only screen and (max-width: 768px) and (min-width: 600px) {
-  .container {
-    width: 85%;
-    height: 60%;
-  }
-
-  .rotation {
-    width: 95%;
-    height: 70%;
-    bottom: 210px;
-    top: 200px;
-    left: 2px;
-    right: 2px;
-  }
-}
-
-@media only screen and (max-width: 992px) and (min-width: 768px) {
-  .container {
-    width: 85%;
-    height: 60%;
-  }
-
-  .rotation {
-    width: 95%;
-    height: 65%;
-    bottom: 120px;
-    top: 5px;
-    left: 2px;
-    right: 2px;
-  }
-}
-
-@media only screen and (max-width: 1200px) and (min-width: 992px) {
-  .container {
-    width: 30%;
-  }
-
-  .rotation {
-    width: 34%;
-    height: 60%;
-    bottom: 145px;
-    left: 2px;
-    right: 2px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .container {
-    width: 30%;
-  }
-
-  .rotation {
-    width: 34%;
-    height: 60%;
-    bottom: 145px;
-    left: 2px;
-    right: 2px;
-  }
 }
