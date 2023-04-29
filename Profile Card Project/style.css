@@ -147,3 +147,51 @@ body {
   initial-value: 0deg;
   inherits: false;
 }
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 30%;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-device-width: 640px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+  .container {
+    width: 100%;
+  }
+}
