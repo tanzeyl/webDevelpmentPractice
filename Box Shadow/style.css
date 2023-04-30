@@ -50,7 +50,7 @@ body {
   padding: 1.5%;
   background-color: rgb(255, 255, 255);
   border-radius: 70px;
-  box-shadow: 30px 150px 150px rgb(0, 0, 0);
+  box-shadow: 3px 5px 4px 4px rgb(0, 0, 0);
   filter: contrast(400%);
 }
 
@@ -60,25 +60,41 @@ body {
 
 @media only screen and (max-width: 600px) {
   .boxShadow {
-    width: 100%;
+    width: 98%;
+  }
+
+  .newDiv {
+    box-shadow: 0px 25px 40px 20px rgb(0, 0, 0);
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 601px) {
   .boxShadow {
-    width: 100%;
+    width: 98%;
+  }
+
+  .newDiv {
+    box-shadow: 0px 25px 40px 20px rgb(0, 0, 0);
   }
 }
 
 @media only screen and (max-width: 992px) and (min-width: 769px) {
   .boxShadow {
-    width: 100%;
+    width: 98%;
+  }
+
+  .newDiv {
+    box-shadow: 0px 25px 40px 20px rgb(0, 0, 0);
   }
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 993px) {
   .boxShadow {
-    width: 100%;
+    width: 98%;
+  }
+
+  .newDiv {
+    box-shadow: 0px 25px 40px 20px rgb(0, 0, 0);
   }
 }
 
