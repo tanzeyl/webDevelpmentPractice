@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #1a68dc;
+}
+
+#info {
+  border-radius: 10px;
+  position: absolute;
+  font-size: 2em;
+  color: #ff4242;
+  padding: 1%;
+  background-color: rgb(86, 34, 0, 0.7);
+}

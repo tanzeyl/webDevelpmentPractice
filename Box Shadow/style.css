@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto 0;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.9;
+}
+
+.boxShadow {
+  font-size: 3rem;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #fff;
+  width: 450px;
+  margin: 2% 0;
+  padding: 1% 0;
+}
+
+.button-1 {
+  background-color: rgb(234, 76, 137);
+  border-radius: 25px;
+  border-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 2%;
+  padding: 1% 2%;
+  text-align: center;
+  width: 20%;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.newDiv {
+  text-align: center;
+  padding: 1.5%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 70px;
+  box-shadow: 30px 150px 150px rgb(0, 0, 0);
+  filter: contrast(400%);
+}
+
+.animate-button {
+  margin: 5px 0;
+}

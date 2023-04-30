@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="newDiv">
+        <div class="top-button">
+          <button class="button-1 top" onclick="box('up')">Up</button>
+        </div>
+        <div class="horizontal">
+          <button class="button-1" onclick="box('left')">Left</button>
+          <div class="boxShadow" id="boxShadow">Box Shadows</div>
+          <button class="button-1" onclick="box('right')">Right</button>
+        </div>
+        <div class="down-button">
+          <button class="button-1 bottom" onclick="box('down')">Down</button>
+        </div>
+        <div class="animate-button">
+          <button onclick="animateButton()" class="button-1 animateButton">
+            Animate
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let count = 0;
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    function box(dir) {
+      if (dir === "left") {
+        document.getElementById("boxShadow").style.boxShadow =
+          "-8px 0px 10px 0.5px black";
+      } else if (dir == "up") {
+        document.getElementById("boxShadow").style.boxShadow =
+          "0px -6px 10px 0.5px black";
+      } else if (dir == "down") {
+        document.getElementById("boxShadow").style.boxShadow =
+          "0px 6px 10px 0.5px black";
+      }
+
+      if (dir === "right") {
+        document.getElementById("boxShadow").style.boxShadow =
+          "8px 0px 10px 0.5px black";
+      }
+    }
+
+    async function animateButton() {
+      count++;
+      if (count % 2 != 0) {
+        borders = [
+          "-8px 0px 10px 0.5px black",
+          "0px -6px 10px 0.5px black",
+          "0px 6px 10px 0.5px black",
+          "8px 0px 10px 0.5px black",
+        ];
+        for (let i = 0; ; i++) {
+          document.getElementById("boxShadow").style.boxShadow = borders[i % 4];
+          await sleep(100);
+          if (count % 2 === 0) {
+            break;
+          }
+        }
+      } else {
+        document.getElementById("boxShadow").style.boxShadow = "";
+      }
+    }
+  </script>
+</html>

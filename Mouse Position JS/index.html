@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Mouse Move JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div onmousemove="getCursor(event)" id="main">
+      <div id="info"></div>
+    </div>
+  </body>
+  <script>
+    function getCursor(event) {
+      let x = event.clientX;
+      let y = event.clientY;
+      let _position = `X: ${x}<br>Y: ${y}`;
+      const infoElement = document.getElementById("info");
+      infoElement.innerHTML = _position;
+      infoElement.style.top = y + "px";
+      infoElement.style.left = x + 20 + "px";
+    }
+  </script>
+</html>
