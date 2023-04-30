@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aefceb;
+}
+
+.main {
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: #e6cefe;
+  width: 50%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input,
+input::placeholder {
+  color: #282827d7;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.result {
+  width: 100%;
+  height: 80px;
+  font-size: 25px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: inherit;
+  background-color: #efb8f1;
+  padding-left: 3%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border-style: none;
+  font-size: 20px;
+  width: 23%;
+  height: 6%;
+  margin: 1%;
+  padding: 1%;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  background-color: #b483e6;
+  color: #240147;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  transition: all 0.2s linear;
+}
+
+.button:hover {
+  background-color: #a144ff;
+}
+
+sup {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  input,
+  input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .result {
+    font-size: 20px;
+  }
+
+  .main {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  input,
+  input::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .result {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  input,
+  input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .result {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  input,
+  input::placeholder {
+    font-size: 1rem;
+  }
+
+  .result {
+    font-size: 14px;
+  }
+}

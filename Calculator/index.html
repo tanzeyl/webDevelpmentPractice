@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <input
+        type="text"
+        class="result"
+        id="result"
+        readonly
+        placeholder="Answer"
+      /><br />
+      <div class="row">
+        <button class="button" onclick="clearExpression()">AC</button>
+        <button class="button" onclick="del()">DEL</button>
+        <button class="button" onclick="addToExpression('%')">%</button>
+        <button class="button" onclick="addToExpression('/')">/</button>
+      </div>
+
+      <div class="row">
+        <button class="button" onclick="addToExpression('7')">7</button>
+        <button class="button" onclick="addToExpression('8')">8</button>
+        <button class="button" onclick="addToExpression('9')">9</button>
+        <button class="button" onclick="addToExpression('*')">*</button>
+      </div>
+
+      <div class="row">
+        <button class="button" onclick="addToExpression('4')">4</button>
+        <button class="button" onclick="addToExpression('5')">5</button>
+        <button class="button" onclick="addToExpression('6')">6</button>
+        <button class="button" onclick="addToExpression('-')">-</button>
+      </div>
+
+      <div class="row">
+        <button class="button" onclick="addToExpression('1')">1</button>
+        <button class="button" onclick="addToExpression('2')">2</button>
+        <button class="button" onclick="addToExpression('3')">3</button>
+        <button class="button" onclick="addToExpression('+')">+</button>
+      </div>
+
+      <div class="row">
+        <button class="button" onclick="addToExpression('0')">0</button>
+        <button class="button" onclick="addToExpression('.')">.</button>
+        <button class="button" onclick="evaluateExpression('=')">=</button>
+        <button class="button" onclick="addToExpression('**2')">
+          x<sup>2</sup>
+        </button>
+      </div>
+
+      <div class="row">
+        <button class="button" onclick="addToExpression('**0.5')">
+          x<sup>1/2</sup>
+        </button>
+        <button class="button" onclick="addToExpression('(')">(</button>
+        <button class="button" onclick="addToExpression(')')">)</button>
+        <button class="button" onclick="addToExpression('Math.PI')">pie</button>
+      </div>
+
+      <div class="row">
+        <button class="button" onclick="addToExpression('Math.E')">e</button>
+        <button class="button" onclick="addToExpression('Math.sin(')">
+          sin
+        </button>
+        <button class="button" onclick="addToExpression('Math.cos(')">
+          cos
+        </button>
+        <button class="button" onclick="addToExpression('Math.log(')">
+          log
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
