@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Acme&family=Noto+Serif&family=Orbitron&display=swap");
 @font-face {
   font-family: "digital-clock-font";
   src: url("DS-DIGII.TTF");
@@ -27,12 +26,7 @@
   color: rgb(0, 255, 0);
   font-family: "digital-clock-font";
   font-size: 3rem;
-  text-shadow:
-    2px 2px 7px rgb(0, 255, 0),
-    0 0 10px rgb(0, 255, 0),
-    0 0 21px rgb(0, 255, 0),
-    0 0 42px rgb(0, 255, 0),
-    0 0 82px rgb(0, 255, 0),
-    0 0 92px rgb(0, 255, 0),
-    0 0 102px rgb(0, 255, 0);
+  text-shadow: 2px 2px 7px rgb(0, 255, 0), 0 0 10px rgb(0, 255, 0),
+    0 0 21px rgb(0, 255, 0), 0 0 42px rgb(0, 255, 0), 0 0 82px rgb(0, 255, 0),
+    0 0 92px rgb(0, 255, 0), 0 0 102px rgb(0, 255, 0);
 }

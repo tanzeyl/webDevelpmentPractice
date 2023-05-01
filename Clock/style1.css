@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(245, 149, 149);
+  background-color: rgb(255, 255, 255);
   font-size: 2rem;
   flex: 1;
   text-align: center;
@@ -13,7 +13,7 @@ body {
   width: 25rem;
   height: 25rem;
   border: 20px solid rgb(0, 0, 0);
-  margin: 0 auto;
+  margin: 5% auto;
   border-radius: 50%;
   position: relative;
   padding: 2rem;
@@ -23,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .dial-1 {
   position: absolute;
   z-index: -1;
@@ -80,7 +81,8 @@ body {
   width: 20%;
 }
 
-
 @keyframes rotation {
-  100% {transform: rotate(360deg);}
+  100% {
+    transform: rotate(360deg);
+  }
 }
