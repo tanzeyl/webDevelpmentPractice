@@ -74,7 +74,6 @@ sup {
 @media screen and (max-width: 1200px) {
   .main {
     width: 90%;
-    height: 100vh;
   }
 }
 
