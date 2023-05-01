@@ -9,14 +9,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #aefceb;
+  background-color: #cfc0c0;
 }
 
 .main {
-  border: 3px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  background-color: #e6cefe;
-  width: 50%;
+  border-radius: 50px;
+  width: 40%;
+  padding: 1%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 10px 20px rgb(0, 0, 0, 0.9);
 }
 
 input:focus {
@@ -26,21 +27,20 @@ input:focus {
 input,
 input::placeholder {
   color: #282827d7;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
 .result {
   width: 100%;
-  height: 80px;
-  font-size: 25px;
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: inherit;
-  background-color: #efb8f1;
-  padding-left: 3%;
+  height: 10%;
+  font-size: 1.65rem;
+  border: none;
+  background-color: #cdcbe7;
+  padding-left: 5%;
+  border-radius: 50px;
+  margin-bottom: 1%;
 }
 
 .row {
@@ -52,21 +52,19 @@ input::placeholder {
 .button {
   border-style: none;
   font-size: 20px;
-  width: 23%;
-  height: 6%;
+  width: 25%;
+  height: 10%;
   margin: 1%;
-  padding: 1%;
-  border: 0.5px solid black;
-  border-radius: 10px;
-  background-color: #b483e6;
-  color: #240147;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #282827d7;
   font-family: "Poppins", sans-serif;
-  font-weight: bolder;
+  font-weight: 900;
   transition: all 0.2s linear;
 }
 
 .button:hover {
-  background-color: #a144ff;
+  background-color: #dad4e0;
 }
 
 sup {
@@ -76,6 +74,7 @@ sup {
 @media screen and (max-width: 1200px) {
   .main {
     width: 90%;
+    height: 100vh;
   }
 }
 
