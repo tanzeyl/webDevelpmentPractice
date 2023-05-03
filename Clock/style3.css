@@ -33,15 +33,15 @@
 .hour-3 {
   width: 60%;
   height: 60%;
-  animation-duration: 43200s;
-  -webkit-animation-duration: 43200s;
+  animation-duration: 60s;
+  -webkit-animation-duration: 60s;
 }
 
 .minute-3 {
   width: 70%;
   height: 70%;
-  animation-duration: 3600s;
-  -webkit-animation-duration: 3600s;
+  animation-duration: 60s;
+  -webkit-animation-duration: 60s;
 }
 
 .second-3 {
