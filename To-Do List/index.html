@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <center>
+      <div class="input">
+        <input type="text" id="item" placeholder="Add Item" />
+        <button onclick="addItem()" class="button">Add</button>
+      </div>
+      <div id="list"></div>
+      <button onclick="deleteAll()" class="button deleteButton">
+        Delete All Items
+      </button>
+    </center>
+  </body>
+</html>
