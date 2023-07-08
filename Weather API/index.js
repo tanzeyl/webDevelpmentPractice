@@ -1,3 +1,11 @@
+let lat, long;
+navigator.geolocation.getCurrentPosition(setPosition);
+
+function setPosition(position) {
+  lat = position.coords.latitude;
+  long = position.coords.longitude;
+}
+
 const options = {
   method: "GET",
   headers: {
@@ -30,7 +38,7 @@ async function getWeather() {
     html += `<span>Cloud: ${result["current"]["cloud"]}</span><br/>`;
     html += `<span>Feels Like: ${result["current"]["feelslike_c"]}&deg;C</span><br/>`;
     html += `<img src="${result["current"]["condition"]["icon"]}" class="img" />`;
-    if (result["current"]["is_day"] == "0") {
+    if (result["current"]["is_day"] == "1") {
       element.style.backgroundImage = "url('day.jpg')";
       element.style.color = "black";
     } else {
@@ -44,4 +52,10 @@ async function getWeather() {
   }
 }
 
-// {"current":{"is_day":1,}}
+function getLoader() {
+  setTimeout(() => console.log("First"), 5000);
+  document.getElementById(
+    "answer"
+  ).innerHTML = `<div class="lds-ripple"><div></div><div></div></div><p>Getting your location!</p>`;
+  getWeather();
+}

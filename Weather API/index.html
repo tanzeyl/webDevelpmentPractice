@@ -2,24 +2,16 @@
 <html>
   <head>
     <title>Weather App</title>
-    <script>
-      let lat, long;
-      navigator.geolocation.getCurrentPosition(setPosition);
-
-      function setPosition(position) {
-        lat = position.coords.latitude;
-        long = position.coords.longitude;
-      }
-    </script>
+    <script></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="panel" id="answer">
         <p class="temp">Weather app by Tanzeel Khan!</p>
-        <button onclick="getWeather()" class="btn">Get Weather Data</button>
+        <button onclick="getLoader()" class="btn">Get Weather Data</button>
       </div>
     </div>
   </body>
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
 </html>
