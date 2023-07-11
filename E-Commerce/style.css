@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 110vh;
 }
 
@@ -21,6 +20,7 @@ header {
   position: sticky;
   top: 0;
   box-shadow: 2px 0 4px black;
+  z-index: 3;
 }
 
 .logo {
@@ -64,6 +64,7 @@ header {
   position: absolute;
   right: 100px;
   height: 90vh;
+  filter: drop-shadow(0 0 20px black);
 }
 
 .homeLine1 {
@@ -100,6 +101,7 @@ header {
   font-size: 0.7rem;
   background-color: rgb(253, 55, 55);
   transition: all 1s;
+  border-radius: 2vmax;
 }
 
 .btn:hover {
@@ -110,11 +112,10 @@ header {
 
 .imageBox > img {
   margin: 5px;
-  border-radius: 50%;
 }
 
 .imageBox > img:hover {
-  border: 4px solid black;
+  transform: translateY(-10px);
 }
 
 .productText {
