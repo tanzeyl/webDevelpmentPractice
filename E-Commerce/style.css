@@ -54,12 +54,66 @@ header {
   align-items: center;
 }
 
-img {
+.home {
+  background-color: rgb(181, 196, 232);
+  height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.homeImage {
+  position: absolute;
+  right: 100px;
+  height: 90vh;
+}
+
+.homeLine1 {
+  position: relative;
+  top: 28%;
+  left: 10%;
+  font-size: 2rem;
+}
+
+.homeLine2 {
+  position: relative;
+  top: 28.5%;
+  left: 10%;
+  font-size: 1rem;
+}
+
+.lightText {
+  position: relative;
+  top: 31%;
+  left: 13%;
+  font-weight: 100;
+  font-size: 0.7rem;
+  color: gray;
+  width: 30vw;
+}
+
+.btn {
+  position: relative;
+  top: 34%;
+  left: 13%;
+  text-decoration: none;
+  border: none;
+  padding: 1%;
+  font-size: 0.7rem;
+  background-color: rgb(253, 55, 55);
+  transition: all 1s;
+}
+
+.btn:hover {
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(253, 55, 55);
+}
+
+.imageBox > img {
   margin: 5px;
   border-radius: 50%;
 }
 
-img:hover {
+.imageBox > img:hover {
   border: 4px solid black;
 }
 
