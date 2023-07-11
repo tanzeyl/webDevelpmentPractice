@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 25px;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 110vh;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  box-shadow: 2px 0 4px black;
+}
+
+.logo {
+  width: 150px;
+  align-self: center;
+  color: rgb(255, 0, 0);
+}
+
+.navContainer {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: rgb(40, 40, 40);
+  transition: all 0.5s;
+  padding: 0.5em;
+}
+
+.navLinks:hover {
+  color: rgb(253, 55, 55);
+  border-bottom: 4px solid rgb(253, 55, 55);
+}
+
+.svgs {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  margin: 5px;
+  border-radius: 50%;
+}
+
+img:hover {
+  border: 4px solid black;
+}
+
+.productText {
+  margin-top: 3%;
+  text-align: center;
+  color: rgb(253, 55, 55);
+  padding: 1%;
+  width: 120px;
+  transition: all 0.5s;
+}
+
+.productText:hover {
+  border-bottom: 3px solid rgb(253, 55, 55);
+}
+
+.container {
+  width: 95vw;
+  margin: 1% auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imgCaption {
+  text-align: center;
+  margin-bottom: 2%;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+footer {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 0.5rem;
+  padding: 2%;
+}
+
+.left {
+  flex-basis: 25vw;
+}
+
+.mid {
+  flex-basis: 50vw;
+  text-align: center;
+}
+
+.footerLogo {
+  color: rgb(253, 55, 55);
+  font-size: 2rem;
+  padding: 3%;
+}
+
+.footerText {
+  color: gray;
+  font-size: 0.75rem;
+  margin-top: 2%;
+}
+
+.right {
+  flex-basis: 25vw;
+  padding: 3%;
+  text-align: center;
+}
+
+.followHeader {
+  text-decoration: underline;
+  margin-bottom: 2%;
+}
+
+.social {
+  margin: 5%;
+  font-size: 0.6rem;
+}
