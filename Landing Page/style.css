@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background-image: url("bg.webp");
+  margin: 0;
+  height: 110vh;
+}
+
+header {
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto";
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: inline-block;
+  width: 150px;
+  color: beige;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.logo:hover {
+  color: salmon;
+}
+
+.nav {
+  display: inline-block;
+  width: 600px;
+  position: absolute;
+  right: 0px;
+}
+
+.nav > a {
+  text-decoration: none;
+  margin: 15px;
+  color: white;
+  transition: all 0.5s;
+}
+
+.nav > a:hover,
+#home {
+  color: salmon;
+}
+
+.mainText {
+  font-size: 80px;
+  color: salmon;
+  width: 500px;
+  position: relative;
+  top: 60px;
+  left: 70px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mainText + h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  position: relative;
+  left: 100px;
+  width: 500px;
+}
+
+.para {
+  margin: 0px;
+  color: white;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: italic;
+  width: 250px;
+  padding: 5px;
+  position: relative;
+  left: 90px;
+  word-spacing: 4px;
+}
+
+.btn {
+  background-color: salmon;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  left: 93px;
+  top: 30px;
+  padding: 15px;
+  font-family: "Roboto";
+  cursor: pointer;
+  font-weight: 700;
+  width: 150px;
+  border: none;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid salmon;
+}
+
+footer {
+  color: white;
+  border-bottom: 2px solid white;
+  width: 300px;
+  font-size: 20px;
+  font-family: "Roboto";
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+}
