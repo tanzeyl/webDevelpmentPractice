@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Carousel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="scene">
+        <div class="carousel">
+          <div class="cell cell-1">1</div>
+          <div class="cell cell-2">2</div>
+          <div class="cell cell-3">3</div>
+          <div class="cell cell-4">4</div>
+          <div class="cell cell-5">5</div>
+          <div class="cell cell-6">6</div>
+          <div class="cell cell-7">7</div>
+          <div class="cell cell-8">8</div>
+          <div class="cell cell-9">9</div>
+        </div>
+      </div>
+    </div>
+    <div class="edit">
+      <div class="form">
+        <label for="numver">Number of Cells</label>
+        <input type="range" id="number" min="3" max="15" value="9" /><br />
+        <label for="orientation">Orientation</label>
+        <input type="radio" value="h" id="h" />Horizontal
+        <input type="radio" value="v" id="v" />Vertical <br />
+      </div>
+      <button onclick="changeNumber()">Submit</button>
+      <button onclick="moveLeft()">Previous</button>
+      <button onclick="moveRight()">Next</button>
+    </div>
+  </body>
+  <script>
+    let currentSlide = 1;
+    let numberOfCells = 9;
+    let tz, angle;
+    let rotateFn = "rotateY";
+
+    tz = Math.round(105 / Math.tan(Math.PI / numberOfCells));
+    angle = Math.round(360 / numberOfCells);
+
+    function changeNumber() {
+      numberOfCells = parseInt(document.getElementById("number").value);
+      tz = Math.round(105 / Math.tan(Math.PI / numberOfCells));
+      angle = Math.round(360 / numberOfCells);
+      if (document.getElementById("h").checked != true) {
+        rotateFn = "rotateX";
+      }
+      let c = document.getElementsByClassName("carousel")[0];
+      c.innerHTML = "";
+      let html = "";
+      for (let i = 0; i < numberOfCells; i++) {
+        html = html + `<div class="cell cell-${i + 1}">${i + 1}</div>`;
+      }
+      c.innerHTML = html;
+      c.style.transform = `translateZ(-${tz}px)`;
+      for (let i = 0; i < numberOfCells; i++) {
+        let el = document.getElementsByClassName(`cell-${i + 1}`)[0];
+        el.style.transform = `${rotateFn}(${i * angle}deg) translateZ(${tz}px)`;
+      }
+    }
+
+    function moveLeft() {
+      let c = document.getElementsByClassName("carousel")[0];
+      c.style.transform = `translateZ(-${tz}px) ${rotateFn}(${
+        -currentSlide * angle
+      }deg)`;
+      currentSlide--;
+    }
+
+    function moveRight() {
+      let c = document.getElementsByClassName("carousel")[0];
+      c.style.transform = `translateZ(-${tz}px) ${rotateFn}(${
+        -currentSlide * angle
+      }deg)`;
+      currentSlide++;
+    }
+  </script>
+</html>
