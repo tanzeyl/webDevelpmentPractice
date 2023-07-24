@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Cube</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="scene">
+        <div class="cube">
+          <div class="cubeFace front">Front</div>
+          <div class="cubeFace back">Back</div>
+          <div class="cubeFace right">Right</div>
+          <div class="cubeFace left">Left</div>
+          <div class="cubeFace top">Top</div>
+          <div class="cubeFace bottom">Bottom</div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <select name="face" id="face">
+        <option value="show-front">Front</option>
+        <option value="show-back">Back</option>
+        <option value="show-right">Right</option>
+        <option value="show-left">Left</option>
+        <option value="show-top">Top</option>
+        <option value="show-bottom">Bottom</option>
+      </select>
+      <button onclick="rotate()">Rotate</button>
+    </center>
+  </body>
+  <script>
+    function rotate() {
+      let cube = document.getElementsByClassName("cube")[0];
+      let face = document.getElementById("face").value;
+      cube.removeAttribute("class");
+      cube.classList.add("cube");
+      cube.classList.add(face);
+    }
+  </script>
+</html>
