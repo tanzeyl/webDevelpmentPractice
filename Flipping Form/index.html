@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Flipping Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center>
+      <button class="btn" onclick="login()">Login</button>
+      <button class="btn" onclick="signup()">Signup</button>
+    </center>
+    <div class="container">
+      <div class="front">
+        <center><h1>Login Form</h1></center>
+        <hr />
+        <form>
+          <div class="formContainer">
+            <label for="loginEmail">Email:</label>
+            <input type="mail" id="logiEmail" placeholder="Email" />
+          </div>
+          <div class="formContainer">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Password" />
+          </div>
+          <button class="btn submitBtn">Submit</button>
+        </form>
+        <hr />
+      </div>
+      <div class="back">
+        <center><h1>Signup Form</h1></center>
+        <hr />
+        <form>
+          <div class="formContainer">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" placeholder="First name" />
+          </div>
+          <div class="formContainer">
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" placeholder="Last name" />
+          </div>
+          <div class="formContainer">
+            <label for="email">Email:</label>
+            <input type="mail" id="email" placeholder="Email" />
+          </div>
+          <div class="formContainer">
+            <label for="Password">Password:</label>
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+          <button class="btn submitBtn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    let angle = 0;
+    let flag = true;
+
+    async function login() {
+      if (flag == true) return;
+      let front = document.getElementsByClassName("front")[0];
+      let back = document.getElementsByClassName("back")[0];
+      front.style.transform = `rotateY(${angle + 180}deg) scaleX(1)`;
+      back.style.transform = `rotateY(${angle + 180}deg) scaleX(1)`;
+      angle = (angle + 180) % 360;
+      await new Promise((r) => setTimeout(r, 300));
+      front.style.zIndex = 1;
+      back.style.zIndex = -1;
+      flag = true;
+    }
+
+    async function signup() {
+      if (flag == false) return;
+      let front = document.getElementsByClassName("front")[0];
+      let back = document.getElementsByClassName("back")[0];
+      front.style.transform = `rotateY(${angle + 180}deg) scaleX(-1)`;
+      back.style.transform = `rotateY(${angle + 180}deg) scaleX(-1)`;
+      angle = (angle + 180) % 360;
+      await new Promise((r) => setTimeout(r, 300));
+      front.style.zIndex = -1;
+      back.style.zIndex = -1;
+      flag = false;
+    }
+  </script>
+</html>
