@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>3D Image</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="buttons">
+      <div class="top">
+        <button onclick="rotate('up')">Up</button>
+      </div>
+      <div class="middle">
+        <button onclick="rotate('left')">Left</button>
+        <button onclick="animate()" class="animate">Animate</button>
+        <button onclick="rotate('right')">Right</button>
+      </div>
+      <div class="bottom">
+        <button onclick="rotate('down')">Down</button>
+      </div>
+    </div>
+    <div class="image">
+      <img src="image.jpg" alt="Image" class="mainImage" />
+      <div class="border"></div>
+      <div class="text">
+        <h1>Lorem, ipsum.</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Exercitationem alias a explicabo quisquam, iure voluptas aliquam
+          quasi, inventore sunt voluptate vero adipisci? Et facilis facere
+          reprehenderit debitis voluptatem asperiores temporibus!
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    function rotate(d) {
+      image = document.getElementsByClassName("image")[0];
+      if (d === "up") {
+        image.style.webkitTransform = "perspective(4000px) rotateX(25deg)";
+      } else if (d === "left") {
+        console.log("In left");
+        image.style.webkitTransform = "perspective(4000px) rotateY(-28deg)";
+      } else if (d === "right") {
+        image.style.webkitTransform = "perspective(4000px) rotateY(26deg)";
+      } else if (d === "down") {
+        image.style.webkitTransform = "perspective(4000px) rotateX(-27deg)";
+      }
+    }
+
+    function animate() {
+      let dirs = ["r", "d", "l", "u"];
+      let i = 0;
+      rotate(dirs[i]);
+      i = (i + 1) % 4;
+    }
+  </script>
+</html>
