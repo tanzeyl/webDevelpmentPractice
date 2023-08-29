@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Stupid Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <h1>Are you stupid?</h1>
+        <h3 class="no">Hehe, I knew it!</h3>
+        <button onclick="clicked()" onmouseenter="yes()" class="yes">No</button>
+        <button onclick="no()" class="noBtn">Yes</button>
+        <div id="confetti"></div>
+      </center>
+    </div>
+  </body>
+  <script>
+    function no() {
+      let text = document.getElementsByClassName("no")[0];
+      text.style.display = "block";
+    }
+
+    async function yes() {
+      let btn = document.getElementsByClassName("yes")[0];
+      let top = Math.floor(Math.random() * 90);
+      let left = Math.floor(Math.random() * 90);
+      await new Promise((r) => setTimeout(r, 50));
+      btn.style.bottom = `${top}%`;
+      btn.style.left = `${left}%`;
+    }
+
+    function clicked() {
+      const celebrationButton = document.getElementsByClassName("noBtn")[0];
+      const confettiContainer = document.getElementById("confetti");
+      confettiContainer.innerHTML = "";
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = `${Math.random() * 50}%`;
+        confetti.style.animationDuration = `${Math.random() * 3 + 1}s`;
+        confettiContainer.appendChild(confetti);
+      }
+      confettiContainer.style.display = "block";
+    }
+
+    yes();
+  </script>
+</html>
