@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .container {
@@ -19,8 +19,4 @@ body {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: 8px 7px 20px 2px white;
-}
-
-p {
-  display: flex;
 }
