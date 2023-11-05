@@ -8,11 +8,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
 }
 
 .container {
   padding: 2%;
-  height: 95%;
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   background-color: rgba(17, 25, 40, 0);
@@ -21,8 +21,6 @@ body {
   box-shadow: 8px 7px 20px 2px white;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    height: 100%; /* Increase the height for small screens */
-  }
+p {
+  display: flex;
 }
