@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="inputContainer">
+      <div class="inputs"></div>
+    </div>
+  </body>
+  <script>
+    let input = document.getElementsByClassName("inputs")[0];
+    let html = "";
+    for (let i = 1; i <= 6; i++) {
+      for (let j = 1; j <= 5; j++) {
+        html += `<input type="text" class="input" id="${j + (i - 1) * 5}" />`;
+      }
+      html += "<br />";
+    }
+    input.innerHTML = html;
+  </script>
+</html>
