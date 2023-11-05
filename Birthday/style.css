@@ -20,3 +20,19 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: 8px 7px 20px 2px white;
 }
+
+.btn {
+  background-color: salmon;
+  text-decoration: none;
+  padding: 15px;
+  cursor: pointer;
+  width: 150px;
+  border: none;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid salmon;
+}
