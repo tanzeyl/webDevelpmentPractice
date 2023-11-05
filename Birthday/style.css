@@ -19,3 +19,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: 8px 7px 20px 2px white;
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    height: 100%; /* Increase the height for small screens */
+  }
+}
