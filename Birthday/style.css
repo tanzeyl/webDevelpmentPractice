@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 80px;
 }
 
 .container {
@@ -29,6 +29,7 @@ body {
   width: 150px;
   border: none;
   transition: all 0.5s;
+  font-size: 80px;
 }
 
 .btn:hover {
