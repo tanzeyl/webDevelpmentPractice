@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Graph Plotting</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <center>
+      <input type="text" id="exp" />
+      <button onclick="plot()">Submit</button>
+    </center>
+    <div style="width: 95vw; height: 95vh">
+      <canvas id="myChart"></canvas>
+    </div>
+    <script>
+      const canvas = document.getElementById("myChart");
+      const ctx = canvas.getContext("2d");
+
+      function evaluateExpression(expression, variableValue) {
+        let modifiedExpression = expression.replace(/x/g, variableValue);
+        try {
+          let result = eval(modifiedExpression);
+          return result;
+        } catch (error) {
+          console.error("Error evaluating expression:", error);
+          return null;
+        }
+      }
+
+      function plot() {
+        let xValues = [];
+        let yValues = [];
+        let expression = document.getElementById("exp").value;
+        let i = 0;
+        while (i < 100) {
+          xValues.push(i);
+          let y = evaluateExpression(expression, i);
+          yValues.push(y);
+          i++;
+        }
+        let myChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                label: "My Dataset",
+                data: yValues,
+                borderColor: "rgba(75, 192, 192, 1)",
+                borderWidth: 2,
+                fill: false,
+                lineTension: 0.1,
+              },
+            ],
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
